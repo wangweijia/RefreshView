@@ -10,10 +10,11 @@
 #import "MJRefresh.h"
 #import "RefreshView.h"
 
-@interface ViewController ()<UITableViewDataSource,FooterRefreshViewDelegate>
+@interface ViewController ()<UITableViewDataSource,FooterRefreshViewDelegate,HearderRefreshDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (nonatomic, strong) FooterRefreshView *refresh;
+@property (nonatomic, strong) HeaderRefreshView *headRefresh;
 @property (nonatomic, strong) NSMutableArray *aArray;
 @property (nonatomic, strong) NSArray *aaArray;
 @end
@@ -34,6 +35,10 @@
     _refresh.delegate = self;
     _refresh.baseTableView = _mainTableView;
     
+    _headRefresh = [[HeaderRefreshView alloc] init];
+    _headRefresh.delegate = self;
+    _headRefresh.baseTableView = _mainTableView;
+    
     _aaArray = @[@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss",@"ssssss"];
     _aArray = [NSMutableArray arrayWithArray:@[@"fsf",@"fsf",@"fsf"]];
 }
@@ -44,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%%%%  %d",_aArray.count);
+//    NSLog(@"%%%%  %d",_aArray.count);
     return _aArray.count;
 }
 
@@ -69,6 +74,7 @@
 }
 
 - (IBAction)stopRefresh:(id)sender {
+    [_headRefresh stopRefresh];
     [_refresh stopRefresh];
 }
 

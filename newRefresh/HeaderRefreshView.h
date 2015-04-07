@@ -10,9 +10,10 @@
 
 @protocol HearderRefreshDelegate <NSObject>
 @optional
-
-
+- (void)refreshViewStart;
 @end
 @interface HeaderRefreshView : RefreshBaseView
+
+@property (nonatomic, assign) id<HearderRefreshDelegate> delegate;
 
 @end

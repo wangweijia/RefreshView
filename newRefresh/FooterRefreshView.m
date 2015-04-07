@@ -54,7 +54,7 @@
 
 - (void)pull_up:(CGFloat)set{
     if (set >= 0) {
-        NSLog(@"开始刷新");
+        NSLog(@"上拉开始刷新");
         [self setRefreshViewStats:RefreshStateLoading];
 
         if (self.baseTableView.contentSize.height >= self.baseTableView.frame.size.height) {
@@ -71,7 +71,7 @@
 }
 
 - (void)stopRefresh{
-    NSLog(@"刷新结束");
+    NSLog(@"上拉刷新结束");
     [self setRefreshViewStats:RefreshStateNormal];
     [UIView animateWithDuration:0.3 animations:^{
         UIEdgeInsets inset = self.baseTableView.contentInset;

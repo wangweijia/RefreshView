@@ -8,3 +8,4 @@
 
 #import "RefreshBaseView.h"
 #import "FooterRefreshView.h"
+#import "HeaderRefreshView.h"
