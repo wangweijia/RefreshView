@@ -15,11 +15,6 @@
 		18BC34D81AC9221F00E15B89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BC34D71AC9221F00E15B89 /* Images.xcassets */; };
 		18BC34DB1AC9221F00E15B89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BC34D91AC9221F00E15B89 /* LaunchScreen.xib */; };
 		18BC34E71AC9221F00E15B89 /* newRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC34E61AC9221F00E15B89 /* newRefreshTests.m */; };
-		18BC350A1AC9255400E15B89 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18BC35001AC9255400E15B89 /* MJRefresh.bundle */; };
-		18BC350B1AC9255400E15B89 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35031AC9255400E15B89 /* MJRefreshBaseView.m */; };
-		18BC350C1AC9255400E15B89 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35051AC9255400E15B89 /* MJRefreshConst.m */; };
-		18BC350D1AC9255400E15B89 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35071AC9255400E15B89 /* MJRefreshFooterView.m */; };
-		18BC350E1AC9255400E15B89 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35091AC9255400E15B89 /* MJRefreshHeaderView.m */; };
 		18BC35121AC92F7100E15B89 /* RefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35111AC92F7100E15B89 /* RefreshBaseView.m */; };
 		18BC351A1AC948A100E15B89 /* FooterRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC35191AC948A100E15B89 /* FooterRefreshView.m */; };
 /* End PBXBuildFile section */
@@ -50,16 +45,6 @@
 		18BC34E01AC9221F00E15B89 /* newRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BC34E51AC9221F00E15B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BC34E61AC9221F00E15B89 /* newRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newRefreshTests.m; sourceTree = "<group>"; };
-		18BC35001AC9255400E15B89 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
-		18BC35011AC9255400E15B89 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
-		18BC35021AC9255400E15B89 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
-		18BC35031AC9255400E15B89 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
-		18BC35041AC9255400E15B89 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
-		18BC35051AC9255400E15B89 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
-		18BC35061AC9255400E15B89 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
-		18BC35071AC9255400E15B89 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
-		18BC35081AC9255400E15B89 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
-		18BC35091AC9255400E15B89 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
 		18BC35101AC92F7100E15B89 /* RefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshBaseView.h; sourceTree = "<group>"; };
 		18BC35111AC92F7100E15B89 /* RefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshBaseView.m; sourceTree = "<group>"; };
 		18BC35181AC948A100E15B89 /* FooterRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterRefreshView.h; sourceTree = "<group>"; };
@@ -107,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				18BC350F1AC92E2600E15B89 /* Refresh */,
-				18BC34F01AC9225500E15B89 /* MJ */,
 				18BC34CE1AC9221F00E15B89 /* AppDelegate.h */,
 				18BC34CF1AC9221F00E15B89 /* AppDelegate.m */,
 				18BC34D11AC9221F00E15B89 /* ViewController.h */,
@@ -144,23 +128,6 @@
 				18BC34E51AC9221F00E15B89 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		18BC34F01AC9225500E15B89 /* MJ */ = {
-			isa = PBXGroup;
-			children = (
-				18BC35001AC9255400E15B89 /* MJRefresh.bundle */,
-				18BC35011AC9255400E15B89 /* MJRefresh.h */,
-				18BC35021AC9255400E15B89 /* MJRefreshBaseView.h */,
-				18BC35031AC9255400E15B89 /* MJRefreshBaseView.m */,
-				18BC35041AC9255400E15B89 /* MJRefreshConst.h */,
-				18BC35051AC9255400E15B89 /* MJRefreshConst.m */,
-				18BC35061AC9255400E15B89 /* MJRefreshFooterView.h */,
-				18BC35071AC9255400E15B89 /* MJRefreshFooterView.m */,
-				18BC35081AC9255400E15B89 /* MJRefreshHeaderView.h */,
-				18BC35091AC9255400E15B89 /* MJRefreshHeaderView.m */,
-			);
-			name = MJ;
 			sourceTree = "<group>";
 		};
 		18BC350F1AC92E2600E15B89 /* Refresh */ = {
@@ -259,7 +226,6 @@
 			files = (
 				18BC34D61AC9221F00E15B89 /* Main.storyboard in Resources */,
 				18BC34DB1AC9221F00E15B89 /* LaunchScreen.xib in Resources */,
-				18BC350A1AC9255400E15B89 /* MJRefresh.bundle in Resources */,
 				18BC34D81AC9221F00E15B89 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,16 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BC350D1AC9255400E15B89 /* MJRefreshFooterView.m in Sources */,
 				18BC35121AC92F7100E15B89 /* RefreshBaseView.m in Sources */,
 				18BC34D31AC9221F00E15B89 /* ViewController.m in Sources */,
-				18BC350E1AC9255400E15B89 /* MJRefreshHeaderView.m in Sources */,
 				18BC351A1AC948A100E15B89 /* FooterRefreshView.m in Sources */,
 				18BC34D01AC9221F00E15B89 /* AppDelegate.m in Sources */,
-				18BC350B1AC9255400E15B89 /* MJRefreshBaseView.m in Sources */,
 				18BB26B11AD3C0A3001ECA29 /* HeaderRefreshView.m in Sources */,
 				18BC34CD1AC9221F00E15B89 /* main.m in Sources */,
-				18BC350C1AC9255400E15B89 /* MJRefreshConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
