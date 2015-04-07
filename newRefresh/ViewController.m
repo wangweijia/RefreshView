@@ -7,14 +7,15 @@
 //
 
 #import "ViewController.h"
-#import "MJRefresh.h"
 #import "RefreshView.h"
 
 @interface ViewController ()<UITableViewDataSource,FooterRefreshViewDelegate,HearderRefreshDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+
 @property (nonatomic, strong) FooterRefreshView *FootRefresh;
 @property (nonatomic, strong) HeaderRefreshView *headRefresh;
+
 @property (nonatomic, strong) NSMutableArray *aArray;
 @property (nonatomic, strong) NSArray *aaArray;
 @end
@@ -23,13 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    self.mainTableView.delegate = self;
+    
     self.mainTableView.dataSource = self;
     self.view.backgroundColor = [UIColor blackColor];
-    
-//    MJRefreshFooterView *footer = [MJRefreshFooterView footer];
-//    footer.scrollView = self.mainTableView;
     
     _FootRefresh = [[FooterRefreshView alloc] init];
     _FootRefresh.delegate = self;
@@ -49,7 +46,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    NSLog(@"%%%%  %d",_aArray.count);
     return _aArray.count;
 }
 

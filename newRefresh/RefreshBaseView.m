@@ -36,7 +36,6 @@
     [_baseTableView removeObserver:self forKeyPath:@"contentOffset" context:nil];
     
     [_baseTableView removeObserver:self forKeyPath:@"contentSize" context:nil];
-
     
     // 监听contentOffset
     [baseTableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];

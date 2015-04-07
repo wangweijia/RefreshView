@@ -13,7 +13,6 @@
 - (void)refreshViewStart:(RefreshViewType)refreshViewType;
 @end
 
-
 @interface FooterRefreshView : RefreshBaseView
 
 @property (nonatomic, assign) id<FooterRefreshViewDelegate> delegate;
