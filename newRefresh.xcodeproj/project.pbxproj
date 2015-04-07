@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		186322BE1ACA3658007AFF6A /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186322BD1ACA3658007AFF6A /* Reveal.framework */; };
 		18BB26B11AD3C0A3001ECA29 /* HeaderRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BB26B01AD3C0A3001ECA29 /* HeaderRefreshView.m */; };
 		18BC34CD1AC9221F00E15B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC34CC1AC9221F00E15B89 /* main.m */; };
 		18BC34D01AC9221F00E15B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC34CF1AC9221F00E15B89 /* AppDelegate.m */; };
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		186322BD1ACA3658007AFF6A /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		18BB26AF1AD3C0A3001ECA29 /* HeaderRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderRefreshView.h; sourceTree = "<group>"; };
 		18BB26B01AD3C0A3001ECA29 /* HeaderRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderRefreshView.m; sourceTree = "<group>"; };
 		18BC34C71AC9221F00E15B89 /* newRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186322BE1ACA3658007AFF6A /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +123,6 @@
 		18BC34CA1AC9221F00E15B89 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				186322BD1ACA3658007AFF6A /* Reveal.framework */,
 				18BC34CB1AC9221F00E15B89 /* Info.plist */,
 				18BC34CC1AC9221F00E15B89 /* main.m */,
 			);
@@ -423,12 +419,7 @@
 				INFOPLIST_FILE = newRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -445,12 +436,7 @@
 				INFOPLIST_FILE = newRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

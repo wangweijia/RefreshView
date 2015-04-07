@@ -13,7 +13,7 @@
 @interface ViewController ()<UITableViewDataSource,FooterRefreshViewDelegate,HearderRefreshDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-@property (nonatomic, strong) FooterRefreshView *refresh;
+@property (nonatomic, strong) FooterRefreshView *FootRefresh;
 @property (nonatomic, strong) HeaderRefreshView *headRefresh;
 @property (nonatomic, strong) NSMutableArray *aArray;
 @property (nonatomic, strong) NSArray *aaArray;
@@ -31,9 +31,9 @@
 //    MJRefreshFooterView *footer = [MJRefreshFooterView footer];
 //    footer.scrollView = self.mainTableView;
     
-    _refresh = [[FooterRefreshView alloc] init];
-    _refresh.delegate = self;
-    _refresh.baseTableView = _mainTableView;
+    _FootRefresh = [[FooterRefreshView alloc] init];
+    _FootRefresh.delegate = self;
+    _FootRefresh.baseTableView = _mainTableView;
     
     _headRefresh = [[HeaderRefreshView alloc] init];
     _headRefresh.delegate = self;
@@ -63,19 +63,33 @@
     return cell;
 }
 
--(void)refreshViewStart{
-    [self performSelector:@selector(fsd) withObject:nil afterDelay:4];
+-(void)refreshViewStart:(RefreshViewType)refreshViewType{
+    if (refreshViewType == RefreshViewTypeFooter) {
+        [self performSelector:@selector(fsd) withObject:nil afterDelay:4];
+    }
+    else{
+        [self performSelector:@selector(abc) withObject:nil afterDelay:3];
+    }
+}
+
+- (void)abc{
+    [self.aArray insertObject:@"wwj0" atIndex:0];
+    [self.aArray insertObject:@"wwj1" atIndex:0];
+    [self.aArray insertObject:@"wwj2" atIndex:0];
+    [self.aArray insertObject:@"wwj3" atIndex:0];
+    [self.mainTableView reloadData];
+    [_headRefresh stopRefresh] ;
 }
 
 - (void)fsd{
     [_aArray addObjectsFromArray:_aaArray];
     [self.mainTableView reloadData];
-    [_refresh stopRefresh] ;
+    [_FootRefresh stopRefresh] ;
 }
 
 - (IBAction)stopRefresh:(id)sender {
     [_headRefresh stopRefresh];
-    [_refresh stopRefresh];
+    [_FootRefresh stopRefresh];
 }
 
 @end

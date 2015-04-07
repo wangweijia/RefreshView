@@ -10,7 +10,7 @@
 
 @protocol HearderRefreshDelegate <NSObject>
 @optional
-- (void)refreshViewStart;
+- (void)refreshViewStart:(RefreshViewType)refreshViewType;
 @end
 @interface HeaderRefreshView : RefreshBaseView
 

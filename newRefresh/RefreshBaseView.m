@@ -75,6 +75,8 @@
             if (_refreshViewType == RefreshViewTypeFooter) {
                 //上拉刷新
                 CGFloat ySet = _baseTableView.contentSize.height - _baseTableView.frame.size.height;
+                if (ySet < 0)
+                    ySet = 0;
                 [self pull_up:_baseTableView.contentOffset.y - ySet];
             }else{
                 //下拉刷新

@@ -39,11 +39,11 @@
             [self.activityIndicatorView startAnimating];
             [self.titleLable setText:@"正在加载"];
             
-            if ([self.delegate respondsToSelector:@selector(refreshViewStart)]) {
-                [self.delegate refreshViewStart];
+            if ([self.delegate respondsToSelector:@selector(refreshViewStart:)]) {
+                [self.delegate refreshViewStart:self.refreshViewType];
             }
             
-            [self setFrame:CGRectMake(0, -44, 0, 0)];
+            [self setFrame:CGRectMake(0, -REFRESHVIEW_HEIGHT, 0, 0)];
             [self.baseTableView addSubview:self];
         }
             break;

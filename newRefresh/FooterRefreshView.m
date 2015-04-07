@@ -39,8 +39,8 @@
             [self.activityIndicatorView startAnimating];
             [self.titleLable setText:@"正在加载"];
             
-            if ([self.delegate respondsToSelector:@selector(refreshViewStart)]) {
-                [self.delegate refreshViewStart];
+            if ([self.delegate respondsToSelector:@selector(refreshViewStart:)]) {
+                [self.delegate refreshViewStart:self.refreshViewType];
             }
             
             [self setFrame:CGRectMake(0, MAX(self.baseTableView.contentSize.height,self.baseTableView.frame.size.height), 0, 0)];
@@ -58,9 +58,9 @@
         [self setRefreshViewStats:RefreshStateLoading];
 
         if (self.baseTableView.contentSize.height >= self.baseTableView.frame.size.height) {
-            _bottom = 44;
+            _bottom = REFRESHVIEW_HEIGHT;
         }else{
-            _bottom = self.baseTableView.frame.size.height - self.baseTableView.contentSize.height + 44;
+            _bottom = self.baseTableView.frame.size.height - self.baseTableView.contentSize.height + REFRESHVIEW_HEIGHT;
         }
         [UIView animateWithDuration:0.3 animations:^{
             UIEdgeInsets inset = self.baseTableView.contentInset;
